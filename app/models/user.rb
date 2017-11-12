@@ -15,10 +15,6 @@ class User < ApplicationRecord
   has_many :posts     
   has_many :postcomments  
 
-validates :nickname, :password, :email, presence: true
-validates :nickname, length: { in: 6..15 }
-validates :nickname, :email, uniqueness: true
-validates :nickname, format: { with: /[a-zA-Z_#][\w.!?,&|@#$%^:;'"-]*/  }
-validates :nickname, format: { without: /\s/ }
+
   
 end
